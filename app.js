@@ -26,7 +26,7 @@ const User = mongoose.model('User', userSchema);
 // Route pour ajouter un utilisateur
 app.post('/users', async (req, res) => {
   try {
-    const user = new User({ name: 'Yassine', email: 'yassine@example.com' });
+    const user = new User({ name: 'Azedine', email: 'azedine@example.com' });
 
     await user.save();
     res.status(201).send(user);
