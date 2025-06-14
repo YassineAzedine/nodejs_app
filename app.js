@@ -6,7 +6,8 @@ const port = process.env.PORT || 3000;
 
 // Middleware pour parser JSON
 app.use(express.json());
-
+const cors = require('cors');
+app.use(cors());
 // Connexion à MongoDB (change l'URL par la tienne)
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
