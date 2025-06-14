@@ -2,14 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 // Middleware pour parser JSON
 app.use(express.json());
 const cors = require('cors');
 app.use(cors());
 // Connexion à MongoDB (change l'URL par la tienne)
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect(`mongodb+srv://w72884169:${process.env.MONGO_PASSWORD}@cluster0.vcrkfzp.mongodb.net/test_db?retryWrites=true&w=majority&appName=Cluster0`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
@@ -49,6 +49,6 @@ app.get('/users', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Serveur lancé sur http://localhost:${port}`);
+app.listen(4000, '0.0.0.0', () => {
+  console.log("Server running on port 4000");
 });
