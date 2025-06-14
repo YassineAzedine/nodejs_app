@@ -1,0 +1,27 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+
+# Logs
+logs
+*.log
+logs/*
+
+# Docker
+docker-compose.override.yml
+*.env
+
+# OS / IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Build outputs
+dist/
+build/
+
+# Optional: fichiers Docker (si tu veux les exclure)
+# Dockerfile
+# docker-compose.yml
